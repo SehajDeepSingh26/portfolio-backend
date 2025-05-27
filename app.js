@@ -13,7 +13,7 @@ app.use(express.json());
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
-app.post('/location', async (req, res) => {
+app.post('/data', async (req, res) => {
     // console.log('Received location:', req.body);
     try {
         const newLocation = new Location(req.body);
